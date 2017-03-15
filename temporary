@@ -1,0 +1,15 @@
+log4j:WARN No appenders could be found for logger (org.springframework.web.context.support.StandardServletEnvironment).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+2월 08, 2017 2:22:43 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring FrameworkServlet 'dispatcher'
+2월 08, 2017 2:22:44 오후 org.apache.catalina.core.ApplicationContext log
+심각: StandardWrapper.Throwable
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [controller.RegisterController]: public java.lang.String controller.RegisterController.handleStep1()
+	
+Caused by: java.lang.IllegalStateException: Invalid mapping on handler class [controller.RegisterController]: public java.lang.String controller.RegisterController.handleStep1()
+	
+Caused by: java.lang.NoSuchMethodError: org.springframework.web.bind.annotation.RequestMapping.path()[Ljava/lang/String;
+	
+심각: Servlet [dispatcher] in web application [] threw load() exception
+java.lang.NoSuchMethodError: org.springframework.web.bind.annotation.RequestMapping.path()[Ljava/lang/String;
